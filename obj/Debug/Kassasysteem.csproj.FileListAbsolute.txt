@@ -1,0 +1,41 @@
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\bin\Debug\Kassasysteem.exe.config
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\bin\Debug\Kassasysteem.exe
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\bin\Debug\Kassasysteem.pdb
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.csproj.AssemblyReference.cache
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.csproj.SuggestedBindingRedirects.cache
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.Properties.Resources.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.csproj.GenerateResource.cache
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.csproj.CoreCompileInputs.cache
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.exe
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.pdb
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.RegisterFom.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.HomeForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.Invoice.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.CustomerForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.ProductForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.AddCustomerForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.EditCustomerForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.RemoveCustomerPoppup.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.AddProductForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.EditProductForm.resources
+C:\Users\jayre\OneDrive\School\Hoge School Zuyd\BLOK-3\Programming fundamentals\Kassasysteem\Programma\Kassasysteem\obj\Debug\Kassasysteem.RemoveProductForm.resources
+D:\ProgrammingConcepts\Kassasysteem\bin\Debug\Kassasysteem.exe.config
+D:\ProgrammingConcepts\Kassasysteem\bin\Debug\Kassasysteem.exe
+D:\ProgrammingConcepts\Kassasysteem\bin\Debug\Kassasysteem.pdb
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.csproj.AssemblyReference.cache
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.AddCustomerForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.AddProductForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.EditCustomerForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.EditProductForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.RegisterFom.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.CustomerForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.HomeForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.Invoice.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.ProductForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.Properties.Resources.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.RemoveCustomerPoppup.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.RemoveProductForm.resources
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.csproj.GenerateResource.cache
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.csproj.CoreCompileInputs.cache
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.exe
+D:\ProgrammingConcepts\Kassasysteem\obj\Debug\Kassasysteem.pdb
