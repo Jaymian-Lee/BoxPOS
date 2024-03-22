@@ -135,9 +135,10 @@ namespace Kassasysteem
                     }
                 }
             }
-
+        // TODO OOP toepassen
         public void UpdateProduct(int Id, string name, string description, double price, int quantity)
         {
+            // Gebruik using om de connectie te openen en te sluiten
             SqlConnection connection = new SqlConnection();
             try
             {
@@ -145,6 +146,7 @@ namespace Kassasysteem
                 connection.Open();
 
                 string sql = "UPDATE dbProduct SET ProductName = @ProductName, ProductDescription = @ProductDescription, productPrice = @productPrice, ProductQuantity = @ProductQuantity WHERE Id = @Id";
+                // implementeert de IDisposable interface en zorgt ervoor dat de connectie wordt gesloten
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@Id", Id);
@@ -157,6 +159,7 @@ namespace Kassasysteem
                 connection.Close();
             }
             catch (SqlException ex) { throw ex; }
+            // Kan weg als ik using bij de sqlconnection gebruik
             finally { connection.Dispose(); }
         }
         public void RemoveProduct(int Id)
