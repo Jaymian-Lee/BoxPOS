@@ -27,7 +27,7 @@ namespace Kassasysteem
             listView1.Items.Clear();
             DAL.products.Clear();
             DAL.FillProductsFromDb();
-            foreach (Products product in DAL.products)
+            foreach (Product product in DAL.products)
             {
                 ListViewItem item = new ListViewItem(product.Id.ToString());
                 item.SubItems.Add(product.ProductName);

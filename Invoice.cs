@@ -9,12 +9,12 @@ namespace Kassasysteem
     internal class InvoiceClass
     {
         public int Id { get; set; }
-        public Products Product { get; set; }
+        public Product Product { get; set; }
         public Customer Customer { get; set; }
         public string ProductName { get; set; }
         public int InvoicePrice { get; set; }
 
-        public InvoiceClass(int id, Products product, Customer customer, string productName, int invoicePrice)
+        public InvoiceClass(int id, Product product, Customer customer, string productName, int invoicePrice)
         {
             Id = id;
             Product = product;

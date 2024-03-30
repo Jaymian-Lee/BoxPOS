@@ -12,11 +12,11 @@ namespace Kassasysteem
     {
 
         public List<Customer> customers = new List<Customer>();
-        public List<Products> products = new List<Products>();
+        public List<Product> products = new List<Product>();
 
         string connectionString = "Data Source=DESKTOP-IR29NG7;Initial Catalog=Box;Integrated Security=True";
 
-        public void AddCustomer(string firstname, string lastname, string address, string zipcode, string phonenumber, string email ) { 
+        public void AddCustomer(Customer customer) { 
             using (SqlConnection connection = new SqlConnection())
             {
                 using (SqlCommand command = new SqlCommand())
@@ -25,12 +25,12 @@ namespace Kassasysteem
                     connection.Open();
                     command.Connection = connection;
                     command.CommandText = "INSERT INTO dbCustomer (CustomerFirstname, CustomerLastname, CustomerAddress, CustomerZipCode, CustomerPhoneNumber, CustomerEmail) VALUES (@CustomerFirstname, @CustomerLastname, @CustomerAddress, @CustomerZipCode, @CustomerPhoneNumber, @CustomerEmail)";
-                    command.Parameters.AddWithValue("@CustomerFirstname", firstname);
-                    command.Parameters.AddWithValue("@CustomerLastname", lastname);
-                    command.Parameters.AddWithValue("@CustomerAddress", address);
-                    command.Parameters.AddWithValue("@CustomerZipCode", zipcode);
-                    command.Parameters.AddWithValue("@CustomerPhoneNumber", phonenumber);
-                    command.Parameters.AddWithValue("@CustomerEmail", email);
+                    command.Parameters.AddWithValue("@CustomerFirstname", customer.CustomerFirstname);
+                    command.Parameters.AddWithValue("@CustomerLastname", customer.CustomerLastname);
+                    command.Parameters.AddWithValue("@CustomerAddress", customer.CustomerAddress);
+                    command.Parameters.AddWithValue("@CustomerZipCode", customer.CustomerZipCode);
+                    command.Parameters.AddWithValue("@CustomerPhoneNumber", customer.CustomerPhoneNumber);
+                    command.Parameters.AddWithValue("@CustomerEmail", customer.CustomerEmail);
 
                     command.ExecuteNonQuery();
                 }
@@ -58,30 +58,32 @@ namespace Kassasysteem
             }
         }
 
-        public void UpdateCustomer(int Id, string firstname, string lastname, string address, string zipcode, string phonenumber, string email)
+        public void UpdateCustomer(Customer customer)
         {
-            SqlConnection connection = new SqlConnection();
             try
             {
+                using (SqlConnection connection = new SqlConnection(connectionString)) 
+                { 
                 connection.ConnectionString = connectionString;
                 connection.Open();
 
                 string sql = "UPDATE dbCustomer SET CustomerFirstname = @CustomerFirstname, CustomerLastname = @CustomerLastname, CustomerAddress = @CustomerAddress, CustomerZipcode = @CustomerZipcode, CustomerPhoneNumber = @CustomerPhoneNumber, CustomerEmail = @CustomerEmail WHERE Id = @Id";
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", Id);
-                    command.Parameters.AddWithValue("@CustomerFirstname", firstname);
-                    command.Parameters.AddWithValue("@CustomerLastname", lastname);
-                    command.Parameters.AddWithValue("@CustomerAddress", address);
-                    command.Parameters.AddWithValue("@CustomerZipcode", zipcode);
-                    command.Parameters.AddWithValue("@CustomerPhoneNumber", phonenumber);
-                    command.Parameters.AddWithValue("@CustomerEmail", email);
+                    command.Parameters.AddWithValue("@Id", customer.Id);
+                    command.Parameters.AddWithValue("@CustomerFirstname", customer.CustomerFirstname);
+                    command.Parameters.AddWithValue("@CustomerLastname", customer.CustomerLastname);
+                    command.Parameters.AddWithValue("@CustomerAddress", customer.CustomerAddress);
+                    command.Parameters.AddWithValue("@CustomerZipcode", customer.CustomerZipCode);
+                    command.Parameters.AddWithValue("@CustomerPhoneNumber", customer.CustomerPhoneNumber);
+                    command.Parameters.AddWithValue("@CustomerEmail", customer.CustomerEmail);
                     command.ExecuteNonQuery();
                 }
                 connection.Close();
             }
+            }
             catch (SqlException ex) { throw ex; }
-            finally { connection.Dispose(); }
+            // finally { connection.Dispose(); }
         }
 
 
@@ -135,13 +137,13 @@ namespace Kassasysteem
                     }
                 }
             }
-        // TODO OOP toepassen
-        public void UpdateProduct(int Id, string name, string description, double price, int quantity)
+        // TODO OOP toepassen | objecten invoegen in plaats van losse variabelen | Opgelost - 30-03-2024
+        public void UpdateProduct(Product product)
         {
             // Gebruik using om de connectie te openen en te sluiten
-            SqlConnection connection = new SqlConnection();
             try
             {
+                using (SqlConnection connection = new SqlConnection(connectionString)) { 
                 connection.ConnectionString = connectionString;
                 connection.Open();
 
@@ -149,18 +151,19 @@ namespace Kassasysteem
                 // implementeert de IDisposable interface en zorgt ervoor dat de connectie wordt gesloten
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-                    command.Parameters.AddWithValue("@Id", Id);
-                    command.Parameters.AddWithValue("@ProductName", name);
-                    command.Parameters.AddWithValue("@ProductDescription", description);
-                    command.Parameters.AddWithValue("@productPrice", price);
-                    command.Parameters.AddWithValue("@ProductQuantity", quantity);
+                    command.Parameters.AddWithValue("@Id", product.Id);
+                    command.Parameters.AddWithValue("@ProductName", product.ProductName);
+                    command.Parameters.AddWithValue("@ProductDescription", product.ProductDescription);
+                    command.Parameters.AddWithValue("@productPrice", product.ProductPrice);
+                    command.Parameters.AddWithValue("@ProductQuantity", product.ProductQuantity);
                     command.ExecuteNonQuery();
                 }
                 connection.Close();
             }
+            }
             catch (SqlException ex) { throw ex; }
             // Kan weg als ik using bij de sqlconnection gebruik
-            finally { connection.Dispose(); }
+            // finally { connection.Dispose(); }
         }
         public void RemoveProduct(int Id)
         {
@@ -198,7 +201,7 @@ namespace Kassasysteem
                         {
                             while (dataReader.Read())
                             {
-                                products.Add(new Products(Int32.Parse(dataReader[0].ToString())
+                                products.Add(new Product(Int32.Parse(dataReader[0].ToString())
                                                                  , dataReader[1].ToString()
                                                                  , dataReader[2].ToString()
                                                                  , Double.Parse(dataReader[3].ToString())
@@ -211,8 +214,7 @@ namespace Kassasysteem
                 }
             }
 
-
-        }
+    }
 
     }
 

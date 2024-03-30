@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kassasysteem
 {
-    internal class Products
+    internal class Product
     {
         DAL DAL = new DAL();
         public int Id { get; set; }
@@ -16,7 +16,7 @@ namespace Kassasysteem
         public double ProductPrice { get; set; }
         public int ProductQuantity { get; set; }
 
-       public Products(int id, string productName, string productDescription, double productPrice, int productQuantity)
+       public Product(int id, string productName, string productDescription, double productPrice, int productQuantity)
         {
             Id = id;
             ProductName = productName;

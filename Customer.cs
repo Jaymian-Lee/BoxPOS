@@ -18,6 +18,7 @@ namespace Kassasysteem
         public string CustomerPhoneNumber { get; set; }
         public string CustomerEmail { get; set; }
 
+
         public Customer(int id, string customerFirstname, string customerLastname, string customerAddress, string customerZipCode, string customerPhoneNumber, string customerEmail) 
         {
             Id = id;

@@ -34,14 +34,22 @@ namespace Kassasysteem
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            // add data to the database when button is clicked
-            
-            DAL.AddCustomer(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text);
+            // Creëer een nieuw Customer object met de waarden uit de form
+            Customer newCustomer = new Customer(0, // Gebruik 0 omdat de db automatisch een id aanmaakt met auto increment
+                                                textBox1.Text,
+                                                textBox2.Text,
+                                                textBox3.Text,
+                                                textBox4.Text,
+                                                textBox5.Text,
+                                                textBox6.Text);
+
+            // Roep AddCustomer aan met het nieuwe Customer object
+            DAL.AddCustomer(newCustomer);
 
             string message = "Gebruiker is toegevoegd";
             MessageBox.Show(message);
-
         }
+
 
         private void lastnameBtn_Click(object sender, EventArgs e)
         {
