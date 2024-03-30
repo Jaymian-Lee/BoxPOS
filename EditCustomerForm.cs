@@ -22,7 +22,16 @@ namespace Kassasysteem
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            DAL.UpdateCustomer(Int32.Parse(textBox1.Text), textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text);
+            Customer updateCustomer = new Customer(
+                Int32.Parse(textBox1.Text), 
+                textBox2.Text, 
+                textBox3.Text, 
+                textBox4.Text, 
+                textBox5.Text, 
+                textBox6.Text, 
+                textBox7.Text
+                );
+            DAL.UpdateCustomer(updateCustomer);
             MessageBox.Show("Gebruiker is aangepast");
         }
 

@@ -21,7 +21,14 @@ namespace Kassasysteem
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            DAL.UpdateProduct(Int32.Parse(textBox1.Text), textBox2.Text, textBox3.Text, Double.Parse(textBox4.Text), Int32.Parse(textBox5.Text));
+            Product newProduct = new Product(
+                Int32.Parse(textBox1.Text), 
+                textBox2.Text, 
+                textBox3.Text, 
+                Double.Parse(textBox4.Text), 
+                Int32.Parse(textBox5.Text)
+                );
+            DAL.UpdateProduct(newProduct);
             MessageBox.Show("Product is gewijzigd!");
         }
 
