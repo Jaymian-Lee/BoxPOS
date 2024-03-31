@@ -120,6 +120,7 @@
       <DependentUpon>RemoveProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Seller.cs" />
+    <Compile Include="Service.cs" />
     <EmbeddedResource Include="AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
